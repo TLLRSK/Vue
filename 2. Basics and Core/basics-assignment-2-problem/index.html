@@ -22,8 +22,9 @@
       <button v-on:click="showAlert">Show Alert</button>
       <hr />
       <!-- 2) Register the user input on "keydown" and output it in the paragraph (hint: event.target.value helps) -->
-      <input v-on:keydown="setName" type="text" />
+      <input v-model="name" type="text" />
       <p>OUTPUT: {{name}}</p>
+      <button v-on:click="resetName">Reset name</button>
       <hr />
       <!-- 3) Repeat 2) but only output the entered value if the ENTER key was pressed -->
       <input type="text" v-on:keydown.enter="confirmName"/>
@@ -31,3 +32,6 @@
     </section>
   </body>
 </html>
+
+
+<!-- https://vuejs.org/guide/essentials/forms -->

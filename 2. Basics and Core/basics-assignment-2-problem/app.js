@@ -14,7 +14,10 @@ const app = Vue.createApp({
             this.name = event.target.value;
         },
         confirmName(event) {
-            this.name = event.target.value;
+            this.confirmedName = event.target.value;
+        },
+        resetName() {
+            this.name = '';
         },
     }
 })
